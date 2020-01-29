@@ -15,7 +15,7 @@ function create() {
   
   const platforms = this.physics.add.staticGroup();
 
-  platforms.create(225, 550, 'platform');
+  platforms.create(225, 510, 'platform');
 
   gameState.player.setCollideWorldBounds(true);
 
