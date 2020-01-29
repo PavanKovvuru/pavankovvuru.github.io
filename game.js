@@ -36,7 +36,7 @@ function update() {
   }
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
-     gameState.player.setVelocityY(-300);
+     gameState.player.setVelocityY(-400);
   }
 }
 
