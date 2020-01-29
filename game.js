@@ -35,6 +35,7 @@ function update() {
   }
     if ((gameState.cursors.space.isDown || gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-800);
+  }
 }
 
 const config = {
