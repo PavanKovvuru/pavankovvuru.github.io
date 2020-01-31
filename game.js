@@ -10,9 +10,9 @@ function preload() {
   this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
 }
-const gameState = {
-  score: 0
-};
+//const gameState = {
+//  score: 0
+//};
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
@@ -38,7 +38,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
+  //  gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
 
