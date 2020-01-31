@@ -57,7 +57,7 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, bug2, function (bug) {
+  this.physics.add.collider(bugs, bug2, function {
     bug.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
@@ -69,7 +69,7 @@ function create() {
     this.add.text(152, 270, 'Click to Restart', { fontSize: '15px', fill: '#ffffff' });
     
 		// Add your code below:
-    this.input.on('pointerup', () =>{
+     this.input.on('pointerup', () =>{
       gameState.score = 0;
     	this.scene.restart();
     });
