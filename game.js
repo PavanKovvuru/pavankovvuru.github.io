@@ -32,7 +32,8 @@ function create() {
 
     cursors = this.input.keyboard.createCursorKeys();
 
-    this.camera.follow(player);
+    //this.camera.follow(player);
+     game.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
 
 }
 
@@ -54,7 +55,6 @@ function update() {
 function render() {
 
     game.debug.cameraInfo(game.camera, 32, 32);
-    game.debug.spriteCoords(player, 32, 500);
 
 }
 
