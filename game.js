@@ -57,11 +57,11 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, bug2, function (bugGen){
-    bug.destroy();
-    gameState.score += 10;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
-  })
+//  this.physics.add.collider(bugs, bug2, function (bugGen){
+ //   bug.destroy();
+  //  gameState.score += 10;
+ //   gameState.scoreText.setText(`Score: ${gameState.score}`);
+ // })
     this.physics.add.collider(gameState.player, bugs, () => {
     bugGenLoop.destroy();
     this.physics.pause();
@@ -70,8 +70,8 @@ function create() {
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-      gameState.score = 0;
-    	this.scene.restart();
+     gameState.score = 0;
+     this.scene.restart();
     });
   });
 
