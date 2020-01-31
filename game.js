@@ -29,6 +29,7 @@ function create() {
 }
 
 function update() {
+   player.body.setZeroVelocity();
   // Add your conditional statements below:
     if (gameState.cursors.left.isDown) {
     gameState.player.setVelocityX(-160);
