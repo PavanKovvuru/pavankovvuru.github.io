@@ -51,6 +51,7 @@ function create() {
     //const xCoord = Math.random() * 450;
     bugs.create(50, 400, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
+     this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
