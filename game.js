@@ -98,6 +98,20 @@ function update() {
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
   }
+// see if enemy and player within 400px of each other
+if (game.physics.arcade.distanceBetween(enemy, player) < 400) {
+
+    // if player to left of enemy AND enemy moving to right (or not moving)
+    if (player.x < enemy.x && enemy.body.velocity.x >= 0) {
+        // move enemy to left
+        enemy.body.velocity.x = -150;
+    }
+    // if player to right of enemy AND enemy moving to left (or not moving)
+    else if (player.x > enemy.x && enemy.body.velocity.x <= 0) {
+        // move enemy to right
+        enemy.body.velocity.x = 150;
+    }
+  }
  
 }
 //function render() {
