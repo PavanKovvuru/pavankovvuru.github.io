@@ -30,7 +30,6 @@ function create() {
 
     player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
 
-    game.physics.p2.enable(player);
 
     cursors = game.input.keyboard.createCursorKeys();
 
