@@ -47,12 +47,12 @@ function create() {
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
   
-  function bugGen (game, x, y) {
+  function bugGen () {
     //const xCoord = Math.random() * 450;
     bugs.create(50, 400, 'bug1');
-    this.body.velocity.x = bugs.SPEED;
+   // this.body.velocity.x = bugs.SPEED;
    }
-    bugs.SPEED = 100;
+  //  bugs.SPEED = 100;
    
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
