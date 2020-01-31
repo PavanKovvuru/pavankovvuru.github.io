@@ -43,7 +43,7 @@ function create() {
 
     // cursors = this.input.keyboard.createCursorKeys();
 
-    //this.camera.follow(player);
+    this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
   
@@ -51,7 +51,7 @@ function create() {
     //const xCoord = Math.random() * 450;
     bugs.create(50, 400, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
-     this.body.velocity.x = 80;
+    // this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
