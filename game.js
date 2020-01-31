@@ -21,7 +21,7 @@ function create() {
    platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
-  // this.physics.add.collider(gameState.player, platforms);
+   this.physics.add.collider(gameState.player, platforms);
   
   // Create your cursor object below: 
 
