@@ -16,7 +16,7 @@ const gameState = {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-  gameState.player = this.physics.add.sprite(500, 670, 'codey').setScale(.5);
+  gameState.player = this.physics.add.sprite(500, 650, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
@@ -49,7 +49,7 @@ function create() {
   
   function bugGen () {
     //const xCoord = Math.random() * 450;
-    bugs.create(10, 670, 'bug1');
+    bugs.create(10, 650, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
