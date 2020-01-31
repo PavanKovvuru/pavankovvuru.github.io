@@ -7,6 +7,7 @@ function preload() {
   this.load.image('bug2', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/bug_2.png')
   this.load.image('bug3', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/bug_3.png')
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
+  this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
 }
 const gameState = {
@@ -19,6 +20,7 @@ function create() {
 
   
   const platforms = this.physics.add.staticGroup();
+  const walls = this.physics.add.staticGroup();
 
    platforms.create(225, 520, 'platform').setScale(1, .3).refreshBody();
    platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
@@ -57,7 +59,7 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, bug2, function (bug){
+  this.physics.add.collider(bugs, wall, function (bug){
     bug.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
