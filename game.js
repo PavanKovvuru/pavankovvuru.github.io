@@ -96,7 +96,7 @@ function update() {
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
-     bugs.setVelocityX(200);
+     bugGen.setVelocityX(200);
   }
  
 }
