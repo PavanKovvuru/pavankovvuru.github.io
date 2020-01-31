@@ -51,7 +51,8 @@ function create() {
     bugs.create(50, 400, 'bug1');
     this.body.velocity.x = bugs.SPEED;
    }
-    bugs.SPEED = 100;
+    bugs.SPEED = 10;
+   
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
     callback: bugGen,
