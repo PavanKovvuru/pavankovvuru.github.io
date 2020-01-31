@@ -78,7 +78,6 @@ function create() {
      this.input.on('pointerup', () =>{
    //  gameState.score = 0;
      this.scene.restart();
-     bugs.setVelocityX(200);
     });
   });
 
@@ -97,7 +96,9 @@ function update() {
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
+     bugs.setVelocityX(200);
   }
+ 
 }
 //function render() {
 
