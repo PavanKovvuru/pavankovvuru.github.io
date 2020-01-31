@@ -20,6 +20,10 @@ function create() {
    platforms.create(225, 520, 'platform').setScale(1, .3).refreshBody();
    platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
+ platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
+ platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
+ platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
    this.physics.add.collider(gameState.player, platforms);
