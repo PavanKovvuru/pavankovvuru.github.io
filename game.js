@@ -27,7 +27,7 @@ function create() {
 }
 
 function update() {
-    codey.body.setZeroVelocity();
+    player.body.setZeroVelocity();
   // Add your conditional statements below:
     if (gameState.cursors.left.isDown) {
     gameState.player.setVelocityX(-160);
@@ -44,7 +44,7 @@ function update() {
 function render() {
 
     game.debug.cameraInfo(game.camera, 32, 32);
-    game.debug.spriteCoords(codey, 32, 500);
+    game.debug.spriteCoords(player, 32, 500);
 
 }
 
