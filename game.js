@@ -78,6 +78,7 @@ function create() {
      this.input.on('pointerup', () =>{
    //  gameState.score = 0;
      this.scene.restart();
+     bugs.setVelocityX(200);
     });
   });
 
