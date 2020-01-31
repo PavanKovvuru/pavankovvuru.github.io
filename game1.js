@@ -45,7 +45,7 @@ function create() {
   const bugs = this.physics.add.group();
   
   function bugGen () {
-    const xCoord = Math.random() * 500;
+    const xCoord = Math.random() * 1900;
     bugs.create(xCoord, 10, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
