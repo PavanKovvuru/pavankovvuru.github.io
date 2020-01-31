@@ -39,7 +39,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-  //  gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
+    gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
 
@@ -65,8 +65,8 @@ function create() {
   this.physics.add.collider(bugs, platforms);
   this.physics.add.collider(bugs, walls, function (bug) {
    bug.destroy();
- //   gameState.score += 10;
-  //  gameState.scoreText.setText(`Score: ${gameState.score}`);
+    gameState.score += 10;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
     this.physics.add.collider(gameState.player, bugs, () => {
     bugGenLoop.destroy();
@@ -76,7 +76,7 @@ function create() {
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-   //  gameState.score = 0;
+    gameState.score = 0;
      this.scene.restart();
     });
   });
