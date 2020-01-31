@@ -57,7 +57,7 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, bug2, function {
+  this.physics.add.collider(bugs, bug2, {
     bug.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
