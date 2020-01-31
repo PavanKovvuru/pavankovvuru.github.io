@@ -9,6 +9,9 @@ function preload() {
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
 }
+const gameState = {
+  score: 0
+};
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
@@ -54,6 +57,23 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
+  this.physics.add.collider(bugs, bug2, function (bug) {
+    bug.destroy();
+    gameState.score += 10;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
+  })
+    this.physics.add.collider(gameState.player, bugs, () => {
+    bugGenLoop.destroy();
+    this.physics.pause();
+    this.add.text(180, 250, 'Game Over', { fontSize: '15px', fill: '#ffffff' });
+    this.add.text(152, 270, 'Click to Restart', { fontSize: '15px', fill: '#ffffff' });
+    
+		// Add your code below:
+    this.input.on('pointerup', () =>{
+      gameState.score = 0;
+    	this.scene.restart();
+    });
+  });
 
 }
 
