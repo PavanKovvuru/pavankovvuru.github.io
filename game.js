@@ -61,7 +61,18 @@ function create() {
     callbackScope: this,
     loop: true
    });
-  
+  this.physics.add.collider(player, walls {
+    bugGenLoop.destroy();
+    this.physics.pause();
+    this.add.text(690, 250, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
+    this.add.text(670, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    
+		// Add your code below:
+     this.input.on('pointerup', () =>{
+    gameState.score = 0;
+     this.scene.restart();
+    });
+   })
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
   this.physics.add.collider(bugs, walls, function (bug) {
