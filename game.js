@@ -27,7 +27,7 @@ function create() {
 
     game.world.setBounds(0, 0, 1920, 1920);
 
-    player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
+   // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
 
 
     cursors = game.input.keyboard.createCursorKeys();
