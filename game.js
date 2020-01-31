@@ -35,6 +35,21 @@ function create() {
 
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
+  const bugs = this.physics.add.group();
+  
+	function bugGen () {
+    //const xCoord = Math.random() * 450;
+    bugs.create(50, 500, 'bug1');
+  }
+    const bugGenLoop = this.time.addEvent({
+    delay: 1000,
+    callback: bugGen,
+    callbackScope: this,
+    loop: true
+  });
+  
+  // Add your code below:
+  this.physics.add.collider(bugs, platforms, function(bug));
 
 }
 
