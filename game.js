@@ -56,7 +56,7 @@ function create() {
   //  bugs.SPEED = 100;
    
     const bugGenLoop = this.time.addEvent({
-    delay: 2000,
+    delay: 1000,
     callback: bugGen,
     callbackScope: this,
     loop: true
