@@ -59,23 +59,23 @@ function create() {
   
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
- // this.physics.add.collider(bugs, walls {
-//   bugs.destroy();
- //   gameState.score += 10;
+  this.physics.add.collider(bugs, walls, funtion (bug) {
+   bug.destroy();
+  //  gameState.score += 10;
   //  gameState.scoreText.setText(`Score: ${gameState.score}`);
- // })
-  //  this.physics.add.collider(gameState.player, bugs, () => {
-  //  bugGenLoop.destroy();
-  //  this.physics.pause();
-  //  this.add.text(180, 250, 'Game Over', { fontSize: '15px', fill: '#ffffff' });
+  })
+    this.physics.add.collider(gameState.player, bugs, () => {
+    bugGenLoop.destroy();
+    this.physics.pause();
+    this.add.text(180, 250, 'Game Over', { fontSize: '15px', fill: '#ffffff' });
   //  this.add.text(152, 270, 'Click to Restart', { fontSize: '15px', fill: '#ffffff' });
     
 		// Add your code below:
-   //  this.input.on('pointerup', () =>{
+     this.input.on('pointerup', () =>{
    //  gameState.score = 0;
-  //   this.scene.restart();
- //   });
-//  });
+     this.scene.restart();
+    });
+  });
 
 }
 
