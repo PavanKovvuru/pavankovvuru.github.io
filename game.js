@@ -22,10 +22,20 @@ function create() {
    platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
-  this.physics.add.collider(gameState.player, platforms);
+  // this.physics.add.collider(gameState.player, platforms);
   
   // Create your cursor object below: 
-   gameState.cursors = this.input.keyboard.createCursorKeys();
+
+    game.world.setBounds(0, 0, 1920, 1920);
+
+    player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
+
+    game.physics.p2.enable(player);
+
+    cursors = game.input.keyboard.createCursorKeys();
+
+    game.camera.follow(player);
+
 }
 
 function update() {
