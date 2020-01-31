@@ -13,6 +13,7 @@ function preload() {
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
   gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);
+  gameState.cursors = this.input.keyboard.createCursorKeys();
   
   const platforms = this.physics.add.staticGroup();
 
@@ -30,7 +31,7 @@ function create() {
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
 
 
-    cursors = this.input.keyboard.createCursorKeys();
+    // cursors = this.input.keyboard.createCursorKeys();
 
     //this.camera.follow(player);
      game.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
