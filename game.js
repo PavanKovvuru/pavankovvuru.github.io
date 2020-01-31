@@ -53,11 +53,11 @@ function update() {
      gameState.player.setVelocityY(-400);
   }
 }
-function render() {
+//function render() {
 
-    game.debug.cameraInfo(game.camera, 225, 450);
+  //  game.debug.cameraInfo(game.camera, 225, 450);
 
-}
+//}
 
 const config = {
   type: Phaser.AUTO,
