@@ -29,7 +29,7 @@ function create() {
    platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
-   walls.create(1850, 795, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
    this.physics.add.collider(gameState.player, platforms);
