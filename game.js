@@ -21,9 +21,9 @@ function create() {
    platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
- platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
- platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
- platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
    this.physics.add.collider(gameState.player, platforms);
@@ -41,19 +41,19 @@ function create() {
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
   
-	function bugGen () {
+  function bugGen () {
     //const xCoord = Math.random() * 450;
     bugs.create(50, 500, 'bug1');
-  }
+   }
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
     callback: bugGen,
     callbackScope: this,
     loop: true
-  });
+   });
   
   // Add your code below:
-  this.physics.add.collider(bugs, platforms, function(bug));
+  this.physics.add.collider(bugs, platforms);
 
 }
 
