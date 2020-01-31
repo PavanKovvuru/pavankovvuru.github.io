@@ -43,7 +43,7 @@ function create() {
   
   function bugGen () {
     //const xCoord = Math.random() * 450;
-    bugs.create(50, 500, 'bug1');
+    bugs.create(50, 400, 'bug1');
    }
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
