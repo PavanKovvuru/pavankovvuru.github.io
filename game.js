@@ -30,9 +30,9 @@ function create() {
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
 
 
-    cursors = game.input.keyboard.createCursorKeys();
+    cursors = this.input.keyboard.createCursorKeys();
 
-    game.camera.follow(player);
+    this.camera.follow(player);
 
 }
 
