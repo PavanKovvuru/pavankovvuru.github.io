@@ -13,7 +13,7 @@ const gameState = {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-  gameState.player = this.physics.add.sprite(1900, 650, 'codey').setScale(.5);
+  gameState.player = this.physics.add.sprite(1800, 650, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
@@ -60,14 +60,14 @@ function create() {
    });
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
- // this.physics.add.collider(bugs, walls, function (bug) {
- //  bug.destroy();
-  //  gameState.score += 10;
-//gameState.scoreText.setText(`Score: ${gameState.score}`);
- // });
+  this.physics.add.collider(bugs, platforms, function (bug) {
+   bug.destroy();
+    gameState.score += 0;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
+  });
 
 this.physics.add.collider(gameState.player, walls, () => {
-bugGenLoop.destroy();
+   bugGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
