@@ -43,7 +43,7 @@ function create() {
 
     // cursors = this.input.keyboard.createCursorKeys();
 
-    this.camera.follow(player);
+    //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
   
@@ -115,7 +115,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500 },
+      gravity: { y: 500, x: 200 },
       enableBody: true,
     }
   },
