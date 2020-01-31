@@ -48,15 +48,15 @@ function create() {
   const bugs = this.physics.add.group();
   
   function bugGen () {
-    //const xCoord = Math.random() * 450;
-    bugs.create(10, 650, 'bug1');
+    const xCoord = Math.random() * 1800;
+    bugs.create(xCoord, 650, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
     const bugGenLoop = this.time.addEvent({
-    delay: 1000,
+    delay: 2000,
     callback: bugGen,
     callbackScope: this,
     loop: true
