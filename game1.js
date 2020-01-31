@@ -70,7 +70,7 @@ this.physics.add.collider(gameState.player, walls, () => {
    bugGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
-    this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    this.add.text(680, 350, 'Click to Continue', { fontSize: '50px', fill: '#ffffff' });
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
