@@ -13,18 +13,18 @@ const gameState = {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-  gameState.player = this.physics.add.sprite(900, 650, 'codey').setScale(.5);
+  gameState.player = this.physics.add.sprite(100, 650, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
 
    platforms.create(225, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
+ //  platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
+  // platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
+  // platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
+  // platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
+  // platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
    walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
@@ -46,37 +46,37 @@ function create() {
   
   function bugGen () {
     const xCoord = Math.random() * 500;
-    bugs.create(xCoord, 650, 'bug1');
+    bugs.create(xCoord, 10, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
     const bugGenLoop = this.time.addEvent({
-    delay: 1000,
+    delay: 10000,
     callback: bugGen,
     callbackScope: this,
     loop: true
    });
   // Add your code below:
-  this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, walls, function (bug) {
-   bug.destroy();
-    gameState.score += 10;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
-  });
+ // this.physics.add.collider(bugs, platforms);
+ // this.physics.add.collider(bugs, walls, function (bug) {
+ //  bug.destroy();
+  //  gameState.score += 10;
+//gameState.scoreText.setText(`Score: ${gameState.score}`);
+ // });
 
-    this.physics.add.collider(gameState.player, bugs, () => {
-    bugGenLoop.destroy();
+this.physics.add.collider(gameState.player, walls, () => {
+bugGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-    gameState.score = 0;
+    gameState.score += 1;
      this.scene.restart();
-    });
+   });
   });
 }
 function update() {
@@ -88,7 +88,7 @@ function update() {
     gameState.player.setVelocityX(200);
     //gameState.bugs.setVelocityX(20);
   } else {
-    gameState.player.setVelocityX(-5);
+    gameState.player.setVelocityX(0);
   }
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
@@ -110,7 +110,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500, x: 200 },
+      gravity: { y: 500 },
       enableBody: true,
     }
   },
