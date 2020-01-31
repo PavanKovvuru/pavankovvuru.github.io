@@ -49,7 +49,9 @@ function create() {
   function bugGen () {
     //const xCoord = Math.random() * 450;
     bugs.create(50, 400, 'bug1');
+    this.body.velocity.x = Spider.SPEED;
    }
+    Spider.SPEED = 100;
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
     callback: bugGen,
