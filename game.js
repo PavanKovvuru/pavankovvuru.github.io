@@ -13,7 +13,7 @@ function preload() {
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
   gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);
-  gameState.cursors = this.input.keyboard.createCursorKeys();
+
   
   const platforms = this.physics.add.staticGroup();
 
@@ -25,8 +25,8 @@ function create() {
    this.physics.add.collider(gameState.player, platforms);
   
   // Create your cursor object below: 
-
-    game.world.setBounds(0, 0, 1920, 1920);
+  gameState.cursors = this.input.keyboard.createCursorKeys();
+  //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
 
@@ -55,7 +55,7 @@ function update() {
 }
 function render() {
 
-    game.debug.cameraInfo(game.camera, 32, 32);
+    game.debug.cameraInfo(game.camera, 225, 450);
 
 }
 
