@@ -26,11 +26,11 @@ function create() {
   // platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
   // platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
-  // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
    this.physics.add.collider(gameState.player, platforms);
- //  this.physics.add.collider(gameState.player, walls);
+   this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
   gameState.cursors = this.input.keyboard.createCursorKeys();
   //  game.world.setBounds(0, 0, 1920, 1920);
@@ -43,12 +43,7 @@ function create() {
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
-  const walls = this.physics.add.group();
-  function wallGen () {
-    walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
-   // this.body.velocity.x = bugs.SPEED;
-    // this.body.velocity.x = 80;
-   }
+
   function bugGen () {
     const xCoord = Math.random() * 1900;
     bugs.create(xCoord, 10, 'bug1');
@@ -65,7 +60,6 @@ function create() {
    });
   // Add your code below:
   this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(walls, platforms);
   this.physics.add.collider(bugs, platforms, function (bug) {
    bug.destroy();
     gameState.score += 0;
