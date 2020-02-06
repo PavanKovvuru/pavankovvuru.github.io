@@ -78,9 +78,9 @@ function create() {
     walls.create(1850, 595, 'wall');
    }
 	
-    const bugGenLoop = this.time.addEvent({
+    const wallGenLoop = this.time.addEvent({
     delay: 1000000,
-    callback: bugGen,
+    callback: wallGen,
     callbackScope: this,
     loop: true
    });
