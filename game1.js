@@ -20,7 +20,7 @@ function create() {
   const walls = this.physics.add.staticGroup();
   const yCoord = Math.random() * 900;
    platforms.create(225, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(300, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(400, yCoord, 'platform').setScale(.1, .3).refreshBody();
   // platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
   // platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
   // platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
