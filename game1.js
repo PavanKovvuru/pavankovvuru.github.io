@@ -51,10 +51,10 @@ function create() {
 
   function wallGen () {
    // const xCoord = Math.random() * 1900;
-    walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
+    walls.create(1850, 595, 'wall');
    }
    this.physics.add.collider(gameState.player, platforms);
-   this.physics.add.collider(gameState.player, walls);
+  // this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
   gameState.cursors = this.input.keyboard.createCursorKeys();
   //  game.world.setBounds(0, 0, 1920, 1920);
