@@ -18,9 +18,9 @@ function create() {
   
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
-
+  const xCoord = Math.random() * 1900;
    platforms.create(225, 680, 'platform').setScale(1, .3).refreshBody();
- //  platforms.create(400, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(xCoord, 680, 'platform').setScale(.3, 1).refreshBody();
   // platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
   // platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
   // platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
@@ -63,10 +63,10 @@ function create() {
   this.physics.add.collider(bugs, platforms, function (bug) {
    bug.destroy();
     gameState.score += 0;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
+    //gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 
-this.physics.add.collider(gameState.player, walls, () => {
+this.physics.add.collider(gameState.player, bugs, () => {
    bugGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
@@ -75,6 +75,7 @@ this.physics.add.collider(gameState.player, walls, () => {
 		// Add your code below:
      this.input.on('pointerup', () =>{
     gameState.score += 1;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
   });
