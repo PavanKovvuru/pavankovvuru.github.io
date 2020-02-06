@@ -76,7 +76,14 @@ function create() {
   function wallGen () {
    // const xCoord = Math.random() * 1900;
     walls.create(1850, 595, 'wall');
-   };
+   }
+	
+    const bugGenLoop = this.time.addEvent({
+    delay: 1000000,
+    callback: bugGen,
+    callbackScope: this,
+    loop: true
+   });
    this.physics.add.collider(gameState.player, platforms);
   // this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
