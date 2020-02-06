@@ -13,18 +13,26 @@ const gameState = {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-  gameState.player = this.physics.add.sprite(1800, 650, 'codey').setScale(.5);
+  gameState.player = this.physics.add.sprite(200, 650, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
   const yCoord = Math.random() * 900;
    platforms.create(225, 680, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(400, yCoord, 'platform').setScale(.1, .3).refreshBody();
-  // platforms.create(800, 680, 'platform').setScale(1, .3).refreshBody();
-  // platforms.create(1100, 680, 'platform').setScale(1, .3).refreshBody();
-  // platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
-  // platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(500, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(600, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(700, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(800, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(900, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1000, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1100, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1200, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1300, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1400, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1500, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1600, yCoord, 'platform').setScale(.1, .3).refreshBody();
+   platforms.create(1700, yCoord, 'platform').setScale(.1, .3).refreshBody();
    platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
    walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
