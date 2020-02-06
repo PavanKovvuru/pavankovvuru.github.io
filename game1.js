@@ -13,7 +13,7 @@ function preload() {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-//  gameState.player = this.physics.add.sprite(200, mCoord, 'codey').setScale(.5);
+// gameState.player = this.physics.add.sprite(200, 10, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
@@ -70,9 +70,8 @@ function create() {
    platforms.create(1650, bCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, 680, 'platform').setScale(1, .3).refreshBody();
   // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
-  gameState.player.setCollideWorldBounds(true);
   gameState.player = this.physics.add.sprite(200, mCoord, 'codey').setScale(.5);
-
+  gameState.player.setCollideWorldBounds(true);
   const walls = this.physics.add.group();
 
   function wallGen () {
