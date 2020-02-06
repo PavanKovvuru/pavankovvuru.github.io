@@ -70,7 +70,7 @@ function create() {
    platforms.create(1650, bCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, 680, 'platform').setScale(1, .3).refreshBody();
   // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
-  gameState.player = this.physics.add.sprite(200, mCoord-20, 'codey').setScale(.5);
+  gameState.player = this.physics.add.sprite(200, mCoord-40, 'codey').setScale(.5);
   gameState.player.setCollideWorldBounds(true);
   const walls = this.physics.add.group();
 
