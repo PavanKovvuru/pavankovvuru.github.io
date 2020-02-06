@@ -13,11 +13,12 @@ function preload() {
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-  gameState.player = this.physics.add.sprite(200, 650, 'codey').setScale(.5);
+//  gameState.player = this.physics.add.sprite(200, mCoord, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
  // const walls = this.physics.add.staticGroup();
+  const mCoord = Math.random() * 900;
   const yCoord = Math.random() * 900;
   const qCoord = Math.random() * 900;
   const wCoord = Math.random() * 900;
@@ -42,7 +43,7 @@ function create() {
   const cCoord = Math.random() * 900;
   const vCoord = Math.random() * 900;
   const bCoord = Math.random() * 900;
-   platforms.create(225, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(225, mCoord, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord, 'platform').setScale(.05, .3).refreshBody();
@@ -70,7 +71,8 @@ function create() {
    platforms.create(1950, 680, 'platform').setScale(1, .3).refreshBody();
   // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
-  
+  gameState.player = this.physics.add.sprite(200, mCoord, 'codey').setScale(.5);
+
   const walls = this.physics.add.group();
 
   function wallGen () {
