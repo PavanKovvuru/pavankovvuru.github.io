@@ -180,7 +180,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 100 },
+      gravity: { y: 700 },
       enableBody: true,
     }
   },
