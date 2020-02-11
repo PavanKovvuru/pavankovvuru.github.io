@@ -96,6 +96,7 @@ function create() {
     callbackScope: this,
     loop: true
    });
+    const saCoord = Math.random() * 200;
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
@@ -109,7 +110,7 @@ function create() {
   //  bugs.SPEED = 100;
    
     const snowGenLoop = this.time.addEvent({
-    delay: 40,
+    delay: (saCoord)+50,
     callback: snowGen,
     callbackScope: this,
     loop: true
@@ -178,7 +179,7 @@ function update() {
   }
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
-     gameState.player.setVelocityY(-400);
+     gameState.player.setVelocityY(-300);
   }
  
 }
@@ -196,7 +197,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 700 },
+      gravity: { y: 500 },
       enableBody: true,
     }
   },
