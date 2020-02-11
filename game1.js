@@ -6,6 +6,7 @@ function preload() {
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
+  this.load.image('snow', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png.png')
 }
 //const gameState = {
 //score: 0
@@ -99,7 +100,21 @@ function create() {
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
-
+  const snows = this.physics.add.group();
+  function snowGen () {
+    const swCoord = Math.random() * 1900;
+    snows.create(swCoord, 10, 'bug1');
+   // this.body.velocity.x = bugs.SPEED;
+    // this.body.velocity.x = 80;
+   }
+  //  bugs.SPEED = 100;
+   
+    const snowGenLoop = this.time.addEvent({
+    delay: 100,
+    callback: snowGen,
+    callbackScope: this,
+    loop: true
+   });
   function bugGen () {
     const xCoord = Math.random() * 1900;
     bugs.create(xCoord, 10, 'bug1');
