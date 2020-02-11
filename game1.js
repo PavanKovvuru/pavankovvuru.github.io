@@ -73,6 +73,16 @@ function create() {
   // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord-40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
+   this.physics.add.collider(gameState.player, platforms);
+  // this.physics.add.collider(gameState.player, walls);
+  // Create your cursor object below: 
+  gameState.cursors = this.input.keyboard.createCursorKeys();
+  //  game.world.setBounds(0, 0, 1920, 1920);
+
+   // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
+    //gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
+
+    // cursors = this.input.keyboard.createCursorKeys();
   const walls = this.physics.add.group();
 
   function wallGen () {
@@ -86,17 +96,6 @@ function create() {
     callbackScope: this,
     loop: true
    });
-   this.physics.add.collider(gameState.player, platforms);
-  // this.physics.add.collider(gameState.player, walls);
-  // Create your cursor object below: 
-  gameState.cursors = this.input.keyboard.createCursorKeys();
-  //  game.world.setBounds(0, 0, 1920, 1920);
-
-   // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    //gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
-
-    // cursors = this.input.keyboard.createCursorKeys();
-
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
