@@ -103,14 +103,14 @@ function create() {
   const snows = this.physics.add.group();
   function snowGen () {
     const swCoord = Math.random() * 1900;
-    snows.create(swCoord, 10, 'bug1');
+    snows.create(swCoord, 10, 'snow');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
     const snowGenLoop = this.time.addEvent({
-    delay: 100,
+    delay: 70,
     callback: snowGen,
     callbackScope: this,
     loop: true
