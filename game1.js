@@ -103,7 +103,7 @@ function create() {
   const snows = this.physics.add.group();
   function snowGen () {
     const swCoord = Math.random() * 1900;
-    snows.create(swCoord, 10, 'snow');
+    snows.create(swCoord, 10, 'snow').setScale(.5, .5);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
