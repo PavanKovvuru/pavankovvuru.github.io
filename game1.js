@@ -130,6 +130,7 @@ function create() {
     loop: true
    });
   // Add your code below:
+  this.physics.add.collider(snows, snows);
   this.physics.add.collider(snows, platforms);
   this.physics.add.collider(snows, gameState.player);
   this.physics.add.collider(bugs, platforms);
