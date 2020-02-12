@@ -47,6 +47,7 @@ function create() {
   const snows = this.physics.add.group();
   function snowGen () {
     const swCoord = Math.random() * 2400;
+    const saCoord = Math.random() * 100;
     snows.create(swCoord-500, 1, 'snow').setScale(.7, .7);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
@@ -54,7 +55,7 @@ function create() {
   //  bugs.SPEED = 100;
    
     const snowGenLoop = this.time.addEvent({
-    delay: 40,
+    delay: (saCoord)+40,
     callback: snowGen,
     callbackScope: this,
     loop: true
