@@ -46,8 +46,8 @@ function create() {
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const snows = this.physics.add.group();
   function snowGen () {
-    const swCoord = Math.random() * 1900;
-    snows.create(swCoord, 1, 'snow').setScale(.7, .7);
+    const swCoord = Math.random() * 2400;
+    snows.create(swCoord-500, 1, 'snow').setScale(.7, .7);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
