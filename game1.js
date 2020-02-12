@@ -180,7 +180,7 @@ function update() {
   }
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
-     gameState.player.setVelocityY(-100);
+     gameState.player.setVelocityY(-200);
   }
  
 }
@@ -198,7 +198,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 100 },
+      gravity: { y: 500 },
       enableBody: true,
     }
   },
