@@ -45,7 +45,7 @@ function create() {
   const vCoord = Math.random() * mCoord;
   const bCoord = Math.random() * mCoord;
    platforms.create(225, mCoord+50, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(500, yCoord-2, 'platform').setScale(.05, .3).refreshBody();
+   platforms.create(500, yCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(800, eCoord, 'platform').setScale(.05, .3).refreshBody();
