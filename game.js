@@ -114,7 +114,7 @@ function update() {
      gameState.player.setVelocityY(-400);
   }
 
-this.cursors = this.input.keyboard.addKeys({up:KeyCodes.W,down:KeyCodes.S,left:KeyCodes.A,right:KeyCodes.S});
+this.cursors = this.input.keyboard.addKeys({up:KeyCodes.W,down:KeyCodes.S,left:KeyCodes.A,right:KeyCodes.D});
  
 }
 //function render() {
