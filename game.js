@@ -110,7 +110,7 @@ function update() {
     gameState.player.setVelocityX(10);
   }
     if ((gameState.cursors.space.isDown || 
-     gameState.cursors.w.isDown)&& gameState.player.body.touching.down) {
+     gameState.cursors."w".isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
   }
  
