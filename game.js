@@ -98,6 +98,7 @@ function create() {
     });
   });
 }
+this.cursors = this.input.keyboard.addKeys({up:KeyCodes.W,down:KeyCodes.S,left:KeyCodes.A,right:KeyCodes.S});
 function update() {
    //player.body.setZeroVelocity();
   // Add your conditional statements below:
@@ -110,7 +111,7 @@ function update() {
     gameState.player.setVelocityX(10);
   }
     if ((gameState.cursors.space.isDown || 
-     gameState.cursors."w".isDown)&& gameState.player.body.touching.down) {
+     gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
   }
  
