@@ -98,7 +98,6 @@ function create() {
     });
   });
 }
-this.cursors = this.input.keyboard.addKeys({up:KeyCodes.W,down:KeyCodes.S,left:KeyCodes.A,right:KeyCodes.S});
 function update() {
    //player.body.setZeroVelocity();
   // Add your conditional statements below:
@@ -114,6 +113,8 @@ function update() {
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-400);
   }
+
+this.cursors = this.input.keyboard.addKeys({up:KeyCodes.W,down:KeyCodes.S,left:KeyCodes.A,right:KeyCodes.S});
  
 }
 //function render() {
