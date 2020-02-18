@@ -45,7 +45,7 @@ function create() {
   const vCoord = Math.random() * 900;
   const bCoord = Math.random() * 900;
   const abCoord = Math.random() * 300;
-   platforms.create(225, mCoord+500, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(225, mCoord+100, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord, 'platform').setScale(.05, .3).refreshBody();
@@ -71,7 +71,7 @@ function create() {
    platforms.create(1550, vCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+600, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(225, mCoord+505, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(225, mCoord+105, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord+5, 'platform').setScale(.05, .3).refreshBody();
