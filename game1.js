@@ -44,7 +44,8 @@ function create() {
   const cCoord = Math.random() * mCoord;
   const vCoord = Math.random() * mCoord;
   const bCoord = Math.random() * mCoord;
-   platforms.create(225, mCoord+50, 'platform').setScale(1, .3).refreshBody();
+  const abCoord = Math.random() * 300;
+   platforms.create(225, mCoord+500, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord, 'platform').setScale(.05, .3).refreshBody();
@@ -69,7 +70,7 @@ function create() {
    platforms.create(1450, cCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1550, vCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord, 'platform').setScale(.05, .3).refreshBody();
-   platforms.create(1950, 680, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1950, abCoord+600, 'platform').setScale(1, .3).refreshBody();
    platforms.create(225, mCoord+55, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord+5, 'platform').setScale(.05, .3).refreshBody();
@@ -95,7 +96,7 @@ function create() {
    platforms.create(1450, cCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1550, vCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
-   platforms.create(1950, 685, 'platform').setScale(1, .3).refreshBody();
+   platforms.create(1950, abCoord+600, 'platform').setScale(1, .3).refreshBody();
   // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord-40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
