@@ -77,6 +77,7 @@ function create() {
     loop: true
    });
   // Add your code below:
+  this.physics.add.collider(snows, platforms);
   this.physics.add.collider(bugs, platforms);
   this.physics.add.collider(bugs, walls, function (bug) {
    bug.destroy();
