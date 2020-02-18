@@ -19,7 +19,7 @@ function create() {
   
   const platforms = this.physics.add.staticGroup();
  // const walls = this.physics.add.staticGroup();
-  const mCoord = Math.random() * 850;
+  const mCoord = Math.random() * 400;
   const qCoord = Math.random() * 900;
   const yCoord = mCoord * ((Math.random() * 3)-1);
   const wCoord = Math.random() * 900;
