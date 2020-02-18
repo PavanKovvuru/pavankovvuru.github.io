@@ -202,7 +202,7 @@ function update() {
     if (gameState.cursors.left.isDown) {
     gameState.player.setVelocityX(-200);
   } else if (gameState.cursors.right.isDown) {
-    gameState.player.setAccelerationX(50);
+    gameState.player.setAccelerationX(500);
     //gameState.bugs.setVelocityX(20);
   } else {
     gameState.player.setVelocityX(0);
