@@ -3,8 +3,7 @@
 //const gameState = {};
 
 function preload() {
-  this.load.image('bug1', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/rocket%20fire.png')
-		//  https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(6).png')
+  this.load.image('bug1', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(6).png')
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png.png')
@@ -65,7 +64,7 @@ function create() {
   
   function bugGen () {
     const xCoord = Math.random() * 550;
-    bugs.create(xCoord-20, 620, 'bug1').setScale(.3);
+    bugs.create(xCoord-20, 650, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
