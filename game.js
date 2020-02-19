@@ -84,6 +84,11 @@ function create() {
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
+  this.physics.add.collider(snows, walls, function (snow) {
+   bug.destroy();
+   // gameState.score += 10;
+   // gameState.scoreText.setText(`Score: ${gameState.score}`);
+  });
 
     this.physics.add.collider(gameState.player, bugs, () => {
     bugGenLoop.destroy();
