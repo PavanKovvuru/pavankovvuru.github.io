@@ -114,7 +114,7 @@ function update() {
    //player.body.setZeroVelocity();
   // Add your conditional statements below:
     if (gameState.cursors.left.isDown) {
-    gameState.player.setVelocityX(-200);
+    gameState.player.setVelocityX(-210);
   } else if (gameState.cursors.right.isDown) {
     gameState.player.setVelocityX(200);
     //gameState.bugs.setVelocityX(20);
