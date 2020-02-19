@@ -38,7 +38,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
+    gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#ffffff' });
 
     // cursors = this.input.keyboard.createCursorKeys();
 
