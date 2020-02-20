@@ -98,7 +98,7 @@ function create() {
    platforms.create(1550, vCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+605, 'platform').setScale(1, .3).refreshBody();
-   walls.create(1850, abCoord+600, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1850, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
@@ -159,6 +159,8 @@ function create() {
    });
   // Add your code below:
   this.physics.add.collider(snows, snows);
+  this.physics.add.collider(snows, walls);
+  this.physics.add.collider(bugs, walls);
   this.physics.add.collider(snows, platforms);
   this.physics.add.collider(snows, bugs);
   this.physics.add.collider(snows, gameState.player);
@@ -174,6 +176,15 @@ this.physics.add.collider(gameState.player, walls, () => {
     bugGenLoop.destroy();
     snowGenLoop.destroy();
     this.physics.pause();
+     this.add.text(700, 220, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
+    this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    
+		// Add your code below:
+     this.input.on('pointerup', () =>{
+     // gameState.score += 1;
+   // gameState.scoreText.setText(`Score: ${gameState.score}`);
+   this.scene.restart();
+  });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 this.physics.add.collider(gameState.player, bugs, () => {
