@@ -98,7 +98,7 @@ function create() {
    platforms.create(1550, vCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+605, 'platform').setScale(1, .3).refreshBody();
-   walls.create(2000, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1950, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
