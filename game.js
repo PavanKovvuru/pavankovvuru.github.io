@@ -30,7 +30,7 @@ function create() {
    platforms.create(1500, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1800, 680, 'platform').setScale(1, .3).refreshBody();
    platforms.create(1900, 680, 'platform').setScale(1, .3).refreshBody();
-   walls.create(1890, 595, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1892, 595, 'wall').setScale(.3, 1).refreshBody();
    walles.create(5, 595, 'walle').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
 
