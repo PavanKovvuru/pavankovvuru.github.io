@@ -103,7 +103,7 @@ function create() {
    walls.create(1900, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
    walles.create(300, 910, 'walle').setScale(10, 0.1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
-//  gameState.player.setCollideWorldBounds(true);
+  gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
   // this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
