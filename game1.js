@@ -5,7 +5,7 @@ function preload() {
   this.load.image('bug1', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(6).png')
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
-  this.load.image('walle', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
+  this.load.image('walle', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/wallewall.png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
   this.load.image('snow', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/snowimage.png')
 }
@@ -101,7 +101,7 @@ function create() {
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+605, 'platform').setScale(1, .3).refreshBody();
    walls.create(1900, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
-   walles.create(300, 910, 'walle').setScale(10, 0.1).refreshBody();
+   walles.create(300, 910, 'walle').setScale(10, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
   gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
