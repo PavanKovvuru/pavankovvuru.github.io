@@ -179,7 +179,7 @@ this.physics.add.collider(gameState.player, walls, () => {
     bugGenLoop.destroy();
     snowGenLoop.destroy();
     this.physics.pause();
-     this.add.text(700, 320, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
+     this.add.text(705, 320, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     
 		// Add your code below:
