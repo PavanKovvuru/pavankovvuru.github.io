@@ -1,5 +1,5 @@
 
-const gameState = {};
+//const gameState = {};
 
 function preload() {
   this.load.image('bug1', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(6).png')
