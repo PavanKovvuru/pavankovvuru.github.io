@@ -164,7 +164,7 @@ function create() {
    });
  function inviGen () {
     //const xCoord = Math.random() * 1900;
-    invis.create(30, 900, 'invi');
+    invis.create(30, 850, 'invi');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
