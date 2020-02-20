@@ -18,7 +18,7 @@ function create() {
 
   
   const platforms = this.physics.add.staticGroup();
- // const walls = this.physics.add.staticGroup();
+  const walls = this.physics.add.staticGroup();
   const mCoord = Math.random() * 400;
   const qCoord = Math.random() * 900;
   const yCoord = mCoord * ((Math.random() * 3)-1);
@@ -97,11 +97,11 @@ function create() {
    platforms.create(1550, vCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+605, 'platform').setScale(1, .3).refreshBody();
-  // walls.create(1850, 595, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1850, abCoord+595, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
-  // this.physics.add.collider(gameState.player, walls);
+   this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
   gameState.cursors = this.input.keyboard.createCursorKeys();
   //  game.world.setBounds(0, 0, 1920, 1920);
@@ -110,19 +110,19 @@ function create() {
     //gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
-  const walls = this.physics.add.group();
+  //const walls = this.physics.add.group();
 
-  function wallGen () {
+ // function wallGen () {
    // const xCoord = Math.random() * 1900;
-    walls.create(1850, 595, 'wall');
-   }
+  //  walls.create(1850, 595, 'wall');
+  // };
 	
-    const wallGenLoop = this.time.addEvent({
-    delay: 1000000,
-    callback: wallGen,
-    callbackScope: this,
-    loop: true
-   });
+   // const wallGenLoop = this.time.addEvent({
+    //delay: 1000000,
+    //callback: wallGen,
+    //callbackScope: this,
+    //loop: true
+  // });
     const saCoord = Math.random() * 200;
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
@@ -182,19 +182,19 @@ this.physics.add.collider(gameState.player, bugs, () => {
      this.scene.restart();
    });
   });
-this.physics.add.collider(gameState.player, walls, () => {
-   bugGenLoop.destroy();
-    this.physics.pause();
-    this.add.text(700, 220, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
-    this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+//this.physics.add.collider(gameState.player, walls, () => {
+  // bugGenLoop.destroy();
+   // this.physics.pause();
+   // this.add.text(700, 220, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
+   // this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     
 		// Add your code below:
-     this.input.on('pointerup', () =>{
+     //this.input.on('pointerup', () =>{
     //gameState.score += 1;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
-     this.scene.restart();
-   });
-  });
+   //  this.scene.restart();
+  // });
+ // });
 }
 function update() {
    //player.body.setZeroVelocity();
