@@ -8,6 +8,7 @@ function preload() {
   this.load.image('walle', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/wallewall.png')
   this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
   this.load.image('snow', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/snowimage.png')
+  this.load.image('invi', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/invisbloc.png')
 }
 const gameState = {
 score: 10000
@@ -111,7 +112,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    //gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
+    gameState.scoreText = this.add.text(850, 800, 'Score: 10000', { fontSize: '30px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
   //const walls = this.physics.add.group();
@@ -131,6 +132,7 @@ function create() {
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
+  const invis = this.physics.add.group();
   const snows = this.physics.add.group();
   function snowGen () {
     const swCoord = Math.random() * 1900;
@@ -160,6 +162,20 @@ function create() {
     callbackScope: this,
     loop: true
    });
+ function inviGen () {
+    //const xCoord = Math.random() * 1900;
+    invis.create(30, 900, 'invi');
+   // this.body.velocity.x = bugs.SPEED;
+    // this.body.velocity.x = 80;
+   }
+  //  bugs.SPEED = 100;
+   
+    const inviGenLoop = this.time.addEvent({
+    delay: 100,
+    callback: inviGen,
+    callbackScope: this,
+    loop: true
+   });
   // Add your code below:
   this.physics.add.collider(snows, snows);
   this.physics.add.collider(snows, walls);
@@ -172,6 +188,11 @@ function create() {
    bug.destroy();
    // gameState.score += 0;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
+  });
+  this.physics.add.collider(invis, platforms, function (inv) {
+   inv.destroy();
+    gameState.score -= 10;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 this.physics.add.collider(gameState.player, walls, () => {
    //snow.destroy();
