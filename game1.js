@@ -171,7 +171,7 @@ function create() {
   //  bugs.SPEED = 100;
    
     const inviGenLoop = this.time.addEvent({
-    delay: 100,
+    delay: 1000,
     callback: inviGen,
     callbackScope: this,
     loop: true
@@ -189,7 +189,7 @@ function create() {
    // gameState.score += 0;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  this.physics.add.collider(invis, platforms, function (inv) {
+  this.physics.add.collider(invis, walles, function (inv) {
    inv.destroy();
     gameState.score -= 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
