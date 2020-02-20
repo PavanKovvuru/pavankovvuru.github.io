@@ -19,6 +19,7 @@ function create() {
   
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
+	//this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
   const mCoord = Math.random() * 400;
   const qCoord = Math.random() * 900;
   const yCoord = mCoord * ((Math.random() * 3)-1);
@@ -97,11 +98,11 @@ function create() {
    platforms.create(1550, vCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+605, 'platform').setScale(1, .3).refreshBody();
-   walls.create(1850, abCoord+510, 'wall').setScale(.3, 1).refreshBody();
+   walls.create(1850, abCoord+600, 'wall').setScale(.3, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
 //  gameState.player.setCollideWorldBounds(true);
    this.physics.add.collider(gameState.player, platforms);
-   this.physics.add.collider(gameState.player, walls);
+  // this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
   gameState.cursors = this.input.keyboard.createCursorKeys();
   //  game.world.setBounds(0, 0, 1920, 1920);
