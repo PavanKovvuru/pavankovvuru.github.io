@@ -171,7 +171,7 @@ function create() {
   //  bugs.SPEED = 100;
    
     const inviGenLoop = this.time.addEvent({
-    delay: 500,
+    delay: 300,
     callback: inviGen,
     callbackScope: this,
     loop: true
