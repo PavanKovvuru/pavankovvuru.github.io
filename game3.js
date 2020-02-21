@@ -11,7 +11,7 @@ var flyer;
 
 function create() {
 
-    const game.physics.startSystem(Phaser.Physics.ARCADE);
+   const game.physics.startSystem(Phaser.Physics.ARCADE);
 
     const cursors = game.input.keyboard.createCursorKeys();
 
@@ -20,17 +20,17 @@ function create() {
    // flyer.animations.add('left', [0, 1, 2, 3], 10, true);
    // flyer.animations.add('right', [5, 6, 7, 8], 10, true);
 
-   const  game.physics.enable(flyer, Phaser.Physics.ARCADE);
+    game.physics.enable(flyer, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-   const  flyer.body.velocity.setTo(200, 200);
+     flyer.body.velocity.setTo(200, 200);
     
     //  This makes the game world bounce-able
-    const flyer.body.collideWorldBounds = true;
+    flyer.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-   const  flyer.body.bounce.setTo(0.8, 0.8);
+     flyer.body.bounce.setTo(0.8, 0.8);
 
 }
 
@@ -98,7 +98,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500 },
+      //gravity: { y: 500 },
       enableBody: true,
     }
   },
