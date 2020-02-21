@@ -230,7 +230,7 @@ this.physics.add.collider(gameState.player, walles, () => {
     // gameState.score = 0;
      //gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
-  });
+   });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 this.physics.add.collider(gameState.player, bugs, () => {
