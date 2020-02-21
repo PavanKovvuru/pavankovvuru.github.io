@@ -11,7 +11,7 @@ function preload() {
   this.load.image('invi', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/invisbloc.png')
 }
 const gameState = {
-score: 10000
+score: 0
 };
 
 // https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
@@ -112,7 +112,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    gameState.scoreText = this.add.text(850, 800, 'Score: 10000', { fontSize: '30px', fill: '#000000' });
+   // gameState.scoreText = this.add.text(850, 800, 'Score: 10000', { fontSize: '30px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
   //const walls = this.physics.add.group();
@@ -162,20 +162,20 @@ function create() {
     callbackScope: this,
     loop: true
    });
- function inviGen () {
+// function inviGen () {
     //const xCoord = Math.random() * 1900;
-    invis.create(30, 850, 'invi');
+   // invis.create(30, 850, 'invi');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
-   }
+ //  }
   //  bugs.SPEED = 100;
    
-    const inviGenLoop = this.time.addEvent({
-    delay: 300,
-    callback: inviGen,
-    callbackScope: this,
-    loop: true
-   });
+   // const inviGenLoop = this.time.addEvent({
+   // delay: 300,
+  //  callback: inviGen,
+  //  callbackScope: this,
+  //  loop: true
+  // });
   // Add your code below:
   this.physics.add.collider(snows, snows);
   this.physics.add.collider(snows, walls);
@@ -189,23 +189,24 @@ function create() {
    // gameState.score += 0;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  this.physics.add.collider(invis, walles, function (inv) {
-   inv.destroy();
-    gameState.score -= 10;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
-  });
+  //this.physics.add.collider(invis, walles, function (inv) {
+   //inv.destroy();
+   // gameState.score -= 10;
+  //  gameState.scoreText.setText(`Score: ${gameState.score}`);
+  //});
 this.physics.add.collider(gameState.player, walls, () => {
    //snow.destroy();
-   // gameState.score += 10;
+    gameState.score += 1;
     bugGenLoop.destroy();
     snowGenLoop.destroy();
     this.physics.pause();
      this.add.text(705, 320, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-    
+    gameState.scoreText = this.add.text(8, 800, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
      this.input.on('pointerup', () =>{
-     // gameState.score += 1;
+      //gameState.score += 1;
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
    this.scene.restart();
   });
@@ -213,17 +214,20 @@ this.physics.add.collider(gameState.player, walls, () => {
   });
 this.physics.add.collider(gameState.player, walles, () => {
    //snow.destroy();
-   // gameState.score += 10;
+    //gameState.score += 1;
+   // gameState.scoreText.setText(`Score: ${gameState.score}`);
     bugGenLoop.destroy();
     snowGenLoop.destroy();
     this.physics.pause();
-     this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
+    this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    gameState.scoreText = this.add.text(8, 800, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    //gameState.scoreText.setText(`Score: ${gameState.score}`);
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-     // gameState.score += 1;
-   // gameState.scoreText.setText(`Score: ${gameState.score}`);
+     gameState.score = 0;
+     gameState.scoreText.setText(`Score: ${gameState.score}`);
    this.scene.restart();
   });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
@@ -234,11 +238,12 @@ this.physics.add.collider(gameState.player, bugs, () => {
     this.physics.pause();
     this.add.text(700, 220, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    gameState.scoreText = this.add.text(8, 800, 'Score: ', { fontSize: '50px', fill: '#000000' });
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-    //gameState.score += 1;
-    //gameState.scoreText.setText(`Score: ${gameState.score}`);
+    gameState.score = 0;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
   });
