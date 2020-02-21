@@ -203,7 +203,7 @@ this.physics.add.collider(gameState.player, walls, () => {
     this.physics.pause();
      this.add.text(705, 320, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Continue', { fontSize: '50px', fill: '#ffffff' });
-    gameState.scoreText = this.add.text(800, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText = this.add.text(800, 520, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
      this.input.on('pointerup', () =>{
@@ -222,7 +222,7 @@ this.physics.add.collider(gameState.player, walles, () => {
     this.physics.pause();
     this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-    gameState.scoreText = this.add.text(800, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText = this.add.text(800, 520, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
     
 		// Add your code below:
@@ -241,7 +241,7 @@ this.physics.add.collider(gameState.player, bugs, () => {
     this.physics.pause();
     this.add.text(700, 220, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-    gameState.scoreText = this.add.text(800, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText = this.add.text(800, 520, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
      this.input.on('pointerup', () =>{
