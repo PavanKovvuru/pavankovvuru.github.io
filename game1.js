@@ -215,37 +215,38 @@ this.physics.add.collider(gameState.player, walls, () => {
   });
 this.physics.add.collider(gameState.player, walles, () => {
    //snow.destroy();
-    gameState.score = 0;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
+    //gameState.score = 0;
+   // gameState.scoreText.setText(`Score: ${gameState.score}`);
     bugGenLoop.destroy();
     snowGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-   // gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
-    //gameState.scoreText.setText(`Score: ${gameState.score}`);
+    gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-    // gameState.score = 0;
-     //gameState.scoreText.setText(`Score: ${gameState.score}`);
+     gameState.score = 0;
+     gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 this.physics.add.collider(gameState.player, bugs, () => {
-    gameState.score = 0;
-    gameState.scoreText.setText(`Score: ${gameState.score}`);
+   // gameState.score = 0;
+   // gameState.scoreText.setText(`Score: ${gameState.score}`);
    bugGenLoop.destroy();
    snowGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 220, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-    //gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
      this.input.on('pointerup', () =>{
-    //gameState.score = 0;
-   // gameState.scoreText.setText(`Score: ${gameState.score}`);
+    gameState.score = 0;
+    gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
   });
