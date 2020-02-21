@@ -112,7 +112,7 @@ function create() {
   //  game.world.setBounds(0, 0, 1920, 1920);
 
    // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-    gameState.scoreText = this.add.text(850, 800, 'Score: ', { fontSize: '30px', fill: '#000000' });
+   // gameState.scoreText = this.add.text(850, 800, 'Score: ', { fontSize: '30px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
   //const walls = this.physics.add.group();
@@ -203,7 +203,7 @@ this.physics.add.collider(gameState.player, walls, () => {
     this.physics.pause();
      this.add.text(705, 320, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-   // gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
+    gameState.scoreText = this.add.text(800, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
      this.input.on('pointerup', () =>{
@@ -227,7 +227,7 @@ this.physics.add.collider(gameState.player, walles, () => {
     
 		// Add your code below:
      this.input.on('pointerup', () =>{
-     gameState.score == 0;
+     gameState.score = 0;
      gameState.scoreText.setText(`Score: ${gameState.score}`);
    this.scene.restart();
   });
@@ -242,7 +242,7 @@ this.physics.add.collider(gameState.player, bugs, () => {
     //gameState.scoreText = this.add.text(650, 500, 'Score: ', { fontSize: '50px', fill: '#000000' });
 		// Add your code below:
      this.input.on('pointerup', () =>{
-    gameState.score == 0;
+    gameState.score = 0;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
