@@ -1,8 +1,9 @@
+
 var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
 
-
+this.load.image('play', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(3).png')
     
 }
 
@@ -14,7 +15,7 @@ function create() {
 
     cursors = game.input.keyboard.createCursorKeys();
 
-    flyer = game.add.sprite(400, 200, 'dude');
+    flyer = game.add.sprite(400, 200, 'play');
 
    // flyer.animations.add('left', [0, 1, 2, 3], 10, true);
    // flyer.animations.add('right', [5, 6, 7, 8], 10, true);
