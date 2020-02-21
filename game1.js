@@ -239,8 +239,8 @@ this.physics.add.collider(gameState.player, bugs, () => {
    bugGenLoop.destroy();
    snowGenLoop.destroy();
     this.physics.pause();
-    this.add.text(700, 220, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
-    this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
+    this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
+    this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText = this.add.text(800, 520, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
 		// Add your code below:
