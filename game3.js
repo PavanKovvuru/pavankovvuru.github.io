@@ -27,8 +27,7 @@ function create() {
   // this.physics.add.collider(gameState.player, walls);
   gameState.cursors = this.input.keyboard.createCursorKeys();
 
-  gameState.scoreText = this.add.text(850, 800, 'Score: 0
-                                      ', { fontSize: '30px', fill: '#000000' });
+  gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#000000' });
 
     // cursors = this.input.keyboard.createCursorKeys();
   //const walls = this.physics.add.group();
