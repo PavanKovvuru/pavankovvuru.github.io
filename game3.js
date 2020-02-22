@@ -115,7 +115,8 @@ this.physics.add.collider(gameState.player, walles, () => {
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
 this.physics.add.collider(gameState.player, bugs, () => {
-    gameState.score += 10;
+       bug.destroy();
+       gameState.score += 10;
  });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   // bugGenLoop.destroy();
@@ -142,9 +143,11 @@ function update() {
   } else {
     gameState.player.setVelocityX(0);
   }
-    if ((gameState.cursors.space.isDown || 
-     gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
+    if (gameState.cursors.up.isDown) {
      gameState.player.setVelocityY(-300);
+  } else if (gameState.cursors.down.isDown) {
+    gameState.player.setVelocityY(300);
+    //gameState.bugs.setVelocityX(20);
   }
   
 }
