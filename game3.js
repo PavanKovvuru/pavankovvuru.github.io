@@ -43,7 +43,7 @@ function create() {
     //snows.create(swCoord, 1, 'snow').setScale(.5, .5);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
-   }
+   
   //  bugs.SPEED = 100;
    
    // const snowGenLoop = this.time.addEvent({
