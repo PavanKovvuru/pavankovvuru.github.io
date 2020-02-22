@@ -54,7 +54,8 @@ function create() {
    });
   function bugGen () {
     const xCoord = Math.random() * 1900;
-    bugs.create(xCoord, 10, 'bug1');
+    const yCoord = Math.random() * 900;
+    bugs.create(xCoord, yCoord, 'bug1');
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
