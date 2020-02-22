@@ -37,21 +37,21 @@ function create() {
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
   const bugs = this.physics.add.group();
   const invis = this.physics.add.group();
-  const snows = this.physics.add.group();
-  function snowGen () {
-    const swCoord = Math.random() * 1900;
-    snows.create(swCoord, 1, 'snow').setScale(.5, .5);
+  //const snows = this.physics.add.group();
+  //function snowGen () {
+   // const swCoord = Math.random() * 1900;
+    //snows.create(swCoord, 1, 'snow').setScale(.5, .5);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
   //  bugs.SPEED = 100;
    
-    const snowGenLoop = this.time.addEvent({
-    delay: (saCoord)+50,
-    callback: snowGen,
-    callbackScope: this,
-    loop: true
-   });
+   // const snowGenLoop = this.time.addEvent({
+    //delay: (saCoord)+50,
+    //callback: snowGen,
+   // callbackScope: this,
+  //  loop: true
+  // });
   function bugGen () {
     const xCoord = Math.random() * 1900;
     const yCoord = Math.random() * 900;
