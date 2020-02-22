@@ -99,7 +99,7 @@ this.physics.add.collider(gameState.player, walles, () => {
     //gameState.score = 0;
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
     bugGenLoop.destroy();
-    snowGenLoop.destroy();
+    //snowGenLoop.destroy();
     this.physics.pause();
     this.add.text(700, 320, 'Game Lost', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
@@ -115,7 +115,7 @@ this.physics.add.collider(gameState.player, walles, () => {
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
   this.physics.add.collider(bugs, gameState.player, function (bug) {
-   bug.destroy();
+    bug.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
