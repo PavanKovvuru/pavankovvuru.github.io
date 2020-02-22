@@ -82,18 +82,13 @@ function create() {
   //  loop: true
   // });
   // Add your code below:
-  this.physics.add.collider(snows, snows);
-  this.physics.add.collider(snows, walls);
-  this.physics.add.collider(bugs, walls);
-  this.physics.add.collider(snows, platforms);
-  this.physics.add.collider(snows, bugs);
+ // this.physics.add.collider(snows, snows);
+ // this.physics.add.collider(snows, walls);
+ // this.physics.add.collider(bugs, walls);
+ // this.physics.add.collider(snows, platforms);
+  //this.physics.add.collider(snows, bugs);
   //this.physics.add.collider(snows, gameState.player);
-  this.physics.add.collider(bugs, platforms);
-  this.physics.add.collider(bugs, platforms, function (bug) {
-   bug.destroy();
-   // gameState.score += 0;
-    //gameState.scoreText.setText(`Score: ${gameState.score}`);
-  });
+ // this.physics.add.collider(bugs, platforms);
   //this.physics.add.collider(invis, walles, function (inv) {
    //inv.destroy();
    // gameState.score -= 10;
@@ -151,8 +146,7 @@ function update() {
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-300);
   }
- 
- 
+  
 }
 
 
