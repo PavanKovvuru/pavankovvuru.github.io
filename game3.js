@@ -137,17 +137,15 @@ function update() {
    //player.body.setZeroVelocity();
   // Add your conditional statements below:
     if (gameState.cursors.left.isDown) {
-    gameState.player.setVelocityX(-200);
+    gameState.player.setAccelerationX(-200);
   } else if (gameState.cursors.right.isDown) {
-    gameState.player.setVelocityX(200);
+    gameState.player.setAccelerationX(200);
     //gameState.bugs.setVelocityX(20);
-  } else {
-    gameState.player.setVelocityX(0);
   }
     if (gameState.cursors.up.isDown) {
-     gameState.player.setVelocityY(-300);
+     gameState.player.setAccelerationY(-300);
   } else if (gameState.cursors.down.isDown) {
-    gameState.player.setVelocityY(300);
+    gameState.player.setAccelerationY(300);
     //gameState.bugs.setVelocityX(20);
   }
   
