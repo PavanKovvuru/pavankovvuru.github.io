@@ -121,7 +121,7 @@ this.physics.add.collider(gameState.player, walles, () => {
   });
 this.physics.add.collider(gameState.player, bugs, () => {
     gameState.score += 10;
-});
+ });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   // bugGenLoop.destroy();
    //snowGenLoop.destroy();
@@ -151,6 +151,7 @@ function update() {
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
      gameState.player.setVelocityY(-300);
   }
+ 
  
 }
 
