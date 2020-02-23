@@ -114,7 +114,7 @@ this.physics.add.collider(gameState.player, walles, () => {
    });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  this.physics.add.collider(bugs, gameState.player, function (bug){
+  this.physics.add.collider(bugs, gameState.player {
     bugs.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
