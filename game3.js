@@ -114,11 +114,12 @@ this.physics.add.collider(gameState.player, walles, () => {
    });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  this.physics.add.collider(bugs, gameState.player, () => {
-    bugs.kill();
+  this.physics.add.collider(bugs, gameState.player, function (bug){
+    bug.kill();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
+
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   // bugGenLoop.destroy();
    //snowGenLoop.destroy();
@@ -150,7 +151,6 @@ function update() {
   }
   
 }
-
 
 const config = {
   type: Phaser.AUTO,
