@@ -19,11 +19,11 @@ function create() {
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
   const walles = this.physics.add.staticGroup();
-  const player = this.physics.add.staticGroup();
+  gameState.player = this.physics.add.staticGroup();
 	//this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
   walles.create(300, 920, 'walle').setScale(10, 1).refreshBody();
-  player.create(200, 340, 'codey').setScale(.5);
-  player.setCollideWorldBounds(true);
+  gameState.player = this.physics.add.sprite(200, 340, 'codey').setScale(.5);
+  gameState.player.setCollideWorldBounds(true);
    //this.physics.add.collider(gameState.player, platforms);
   // this.physics.add.collider(gameState.player, walls);
   gameState.cursors = this.input.keyboard.createCursorKeys();
@@ -95,7 +95,7 @@ function create() {
    // gameState.score -= 10;
   //  gameState.scoreText.setText(`Score: ${gameState.score}`);
   //});
-this.physics.add.collider(player, walles, () => {
+this.physics.add.collider(gameState.player, walles, () => {
    //snow.destroy();
     //gameState.score = 0;
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
@@ -115,7 +115,7 @@ this.physics.add.collider(player, walles, () => {
    });
    // gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  this.physics.add.collider(bugs, player, function (bug){
+  this.physics.add.collider(bugs, gameState.player, function (bug){
     bug.destroy();
     gameState.score += 10;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
@@ -139,15 +139,15 @@ function update() {
    //player.body.setZeroVelocity();
   // Add your conditional statements below:
     if (gameState.cursors.left.isDown) {
-      player.setAccelerationX(-200);
+      gameState.player.setAccelerationX(-200);
   } else if (gameState.cursors.right.isDown) {
-      player.setAccelerationX(200);
+      gameState.player.setAccelerationX(200);
     //gameState.bugs.setVelocityX(20);
   }
     if (gameState.cursors.up.isDown) {
-     player.setAccelerationY(-300);
+     gameState.player.setAccelerationY(-300);
   } else if (gameState.cursors.down.isDown) {
-    player.setAccelerationY(300);
+     gameState.player.setAccelerationY(300);
     //gameState.bugs.setVelocityX(20);
   }
   
