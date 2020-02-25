@@ -19,10 +19,10 @@ function create() {
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
   const walles = this.physics.add.staticGroup();
-  //gameState.player = this.physics.add.staticGroup();
+  gameState.player = this.physics.add.staticGroup();
 	//this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
   walles.create(300, 920, 'walle').setScale(10, 1).refreshBody();
-  gameState.player = this.physics.add.sprite(200, 340, 'codey').setScale(.5).refreshBody();
+  gameState.player = this.physics.add.sprite(200, 340, 'codey').setScale(.5);
   gameState.player.setCollideWorldBounds(true);
    //this.physics.add.collider(gameState.player, platforms);
   // this.physics.add.collider(gameState.player, walls);
