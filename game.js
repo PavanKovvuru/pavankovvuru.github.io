@@ -136,6 +136,7 @@ function update() {
     //gameState.bugs.setVelocityX(20);
   } else {
     gameState.player.setVelocityX(10);
+    bugs.setVelocityX(10);
   }
     if ((gameState.cursors.space.isDown || 
      gameState.cursors.up.isDown)&& gameState.player.body.touching.down) {
