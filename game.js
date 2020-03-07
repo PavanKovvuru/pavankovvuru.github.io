@@ -24,7 +24,7 @@ function create() {
   const walles = this.physics.add.staticGroup();
 
 
-   platforms.create(1100, 680, 'platform').setScale(500, .3).refreshBody();
+   platforms.create(1100, 680, 'platform').setScale(100, .3).refreshBody();
    walls.create(1894, 595, 'wall').setScale(.3, 1).refreshBody();
    walles.create(5, 595, 'walle').setScale(.3, 1).refreshBody();
   gameState.player.setCollideWorldBounds(true);
