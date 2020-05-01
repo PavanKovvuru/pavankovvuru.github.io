@@ -79,7 +79,7 @@ function create() {
   this.physics.add.collider(bugs, platforms);
   this.physics.add.collider(bugs, walls, function (bug) {
    bug.destroy();
-    gameState.score += 10;
+    gameState.score += 1;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
   this.physics.add.collider(snows, walls, function (snow) {
