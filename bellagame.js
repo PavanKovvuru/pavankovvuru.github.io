@@ -75,7 +75,6 @@ function create() {
    platforms.create(1550, vCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1650, bCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1950, abCoord+600, 'platform').setScale(1, .3).refreshBody();
-   platforms.create(225, mCoord+105, 'platform').setScale(1, .3).refreshBody();
    platforms.create(500, yCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(600, qCoord+5, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(700, wCoord+5, 'platform').setScale(.05, .3).refreshBody();
