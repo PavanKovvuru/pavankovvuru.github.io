@@ -75,7 +75,7 @@ function create() {
    platforms.create(1550, vCoord, 'platform').setScale(.08, .4).refreshBody();
    platforms.create(1650, bCoord, 'platform').setScale(.08, .4).refreshBody();
    platforms.create(1950, abCoord+600, 'platform').setScale(1, .4).refreshBody();
-   walls.create(1850, abCoord+549, 'wall').setScale(.6, .6).refreshBody();
+   walls.create(1850, abCoord+547, 'wall').setScale(.6, .6).refreshBody();
    walles.create(300, 920, 'walle').setScale(10, 1).refreshBody();
   gameState.player = this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.6);
   gameState.player.setCollideWorldBounds(true);
@@ -110,7 +110,7 @@ function create() {
   const snows = this.physics.add.group();
   function snowGen () {
     const swCoord = Math.random() * 1900;
-    snows.create(swCoord, 1, 'snow').setScale(.9, .9);
+    snows.create(swCoord, 1, 'snow').setScale(.7, .7);
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
