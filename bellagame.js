@@ -173,7 +173,7 @@ this.physics.add.collider(gameState.player, walls, () => {
     gameState.score += 1;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
     bugGenLoop.destroy();
-   // snowGenLoop.destroy();
+    snowGenLoop.destroy();
     this.physics.pause();
      this.add.text(640, 320, 'Cake acquired', { fontSize: '80px', fill: '#ffffff' });
      this.add.text(500, 430, 'Happy Birthday Bella', { fontSize: '80px', fill: '#ffffff' });
