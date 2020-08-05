@@ -175,8 +175,8 @@ this.physics.add.collider(gameState.player, walls, () => {
     bugGenLoop.destroy();
    // snowGenLoop.destroy();
     this.physics.pause();
-     this.add.text(650, 320, 'Cake acquired', { fontSize: '80px', fill: '#ffffff' });
-     this.add.text(510, 430, 'Happy Birthday Bella', { fontSize: '80px', fill: '#ffffff' });
+     this.add.text(640, 320, 'Cake acquired', { fontSize: '80px', fill: '#ffffff' });
+     this.add.text(500, 430, 'Happy Birthday Bella', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 550, 'Click to Continue', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText = this.add.text(800, 600, 'cakes: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
