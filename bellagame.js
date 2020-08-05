@@ -49,11 +49,11 @@ function create() {
   const vCoord = Math.random() * 900;
   const bCoord = Math.random() * 900;
   const abCoord = Math.random() * 300;
-   platforms.create(225, mCoord+100, 'platform').setScale(2, .3).refreshBody();
-   platforms.create(500, yCoord, 'platform').setScale(.05, .3).refreshBody();
-   platforms.create(600, qCoord, 'platform').setScale(.05, .3).refreshBody();
-   platforms.create(700, wCoord, 'platform').setScale(.05, .3).refreshBody();
-   platforms.create(800, eCoord, 'platform').setScale(.05, .3).refreshBody();
+   platforms.create(225, mCoord+100, 'platform').setScale(2, .5).refreshBody();
+   platforms.create(500, yCoord, 'platform').setScale(.1, .5).refreshBody();
+   platforms.create(600, qCoord, 'platform').setScale(.1, .5).refreshBody();
+   platforms.create(700, wCoord, 'platform').setScale(.1, .5).refreshBody();
+   platforms.create(800, eCoord, 'platform').setScale(.1, .5).refreshBody();
    platforms.create(900, rCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1000, tCoord, 'platform').setScale(.05, .3).refreshBody();
    platforms.create(1100, uCoord, 'platform').setScale(.05, .3).refreshBody();
