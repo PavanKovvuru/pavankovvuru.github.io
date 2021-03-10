@@ -14,7 +14,6 @@ const gameState = {
   score: 0
 };
 
-// https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
   gameState.player = this.physics.add.sprite(900, 620, 'codey').setScale(.35);
 
