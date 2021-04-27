@@ -14,7 +14,6 @@ const gameState = {
   score: 0
 };
 
-txt.setFontFamily('Roboto');
 
 function create() {
   gameState.player = this.physics.add.sprite(900, 620, 'codey').setScale(.35);
@@ -145,7 +144,7 @@ function update() {
   //  game.debug.cameraInfo(game.camera, 225, 450);
 
 //}
-
+txt.setFont('Roboto');
 const config = {
   type: Phaser.AUTO,
   width: 1900,
