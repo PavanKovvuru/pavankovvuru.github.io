@@ -144,7 +144,7 @@ function update() {
   //  game.debug.cameraInfo(game.camera, 225, 450);
 
 //}
-txt.setFont('Roboto');
+
 const config = {
   type: Phaser.AUTO,
   width: 1900,
