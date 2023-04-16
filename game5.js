@@ -3,7 +3,7 @@ function preload() {
   this.load.image('platform', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(4).png')
   this.load.image('wall', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
   this.load.image('walle', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/New%20Piskel-1.png%20(7).png')
-  this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/pixil-frame-5%20(1).png')
+  this.load.image('codey', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/pixil-frame-5%20(2).png')
   this.load.image('snow', 'https://raw.githubusercontent.com/PavanKovvuru/pavankovvuru.github.io/master/snowimage.png')
 }
 const gameState = {
@@ -11,7 +11,7 @@ const gameState = {
 };
 
 function create() {
-  gameState.player = this.physics.add.sprite(600, 320, 'codey').setScale(.35);
+  gameState.player = this.physics.add.sprite(700, 420, 'codey').setScale(.35);
 
   
   const platforms = this.physics.add.staticGroup();
