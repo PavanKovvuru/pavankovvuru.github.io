@@ -96,5 +96,17 @@
 <p style="text-align:center;">
 
 Addiction Helpline, Alberta Health Services: <br>​ 1-866-332-2322 </p>
+  
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
 </body>
 </html>
