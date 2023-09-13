@@ -32,9 +32,9 @@ function create() {
    this.physics.add.collider(gameState.player, walls);
   // Create your cursor object below: 
   gameState.cursors = this.input.keyboard.createCursorKeys();
-  //  game.world.setBounds(0, 0, 1920, 1920);
+ 
 
-   // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
+
     gameState.scoreText = this.add.text(850, 800, 'Score: 0', { fontSize: '30px', fill: '#ffffff' });
 
     // cursors = this.input.keyboard.createCursorKeys();
@@ -49,7 +49,7 @@ function create() {
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
-  //  bugs.SPEED = 100;
+
    
     const snowGenLoop = this.time.addEvent({
     delay: (srCoord)+40,
@@ -65,7 +65,7 @@ function create() {
    // this.body.velocity.x = bugs.SPEED;
     // this.body.velocity.x = 80;
    }
-  //  bugs.SPEED = 100;
+
    
     const bugGenLoop = this.time.addEvent({
     delay: 1000,
@@ -73,7 +73,7 @@ function create() {
     callbackScope: this,
     loop: true
    });
-  // Add your code below:
+
   this.physics.add.collider(snows, platforms);
   this.physics.add.collider(bugs, platforms);
   this.physics.add.collider(bugs, walls, function (bug) {
@@ -94,7 +94,7 @@ function create() {
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     
-		// Add your code below:
+
      this.input.on('pointerup', () =>{
     gameState.score = 0;
      this.scene.restart();
@@ -107,7 +107,7 @@ function create() {
     this.add.text(700, 220, 'Game Over', { fontSize: '80px', fill: '#ffffff' });
     this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     
-		// Add your code below:
+
      this.input.on('pointerup', () =>{
     gameState.score = 0;
      this.scene.restart();
@@ -138,11 +138,7 @@ function update() {
 
  
 }
-//function render() {
 
-  //  game.debug.cameraInfo(game.camera, 225, 450);
-
-//}
 
 const config = {
   type: Phaser.AUTO,
