@@ -14,15 +14,13 @@ const gameState = {
 score: 0
 };
 
-// https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png
 function create() {
-// gameState.player = this.physics.add.sprite(200, 10, 'codey').setScale(.5);
 
   
   const platforms = this.physics.add.staticGroup();
   const walls = this.physics.add.staticGroup();
   const walles = this.physics.add.staticGroup();
-	//this.physics.add.sprite(200, mCoord+40, 'codey').setScale(.5);
+
   const mCoord = Math.random() * 400;
   const qCoord = Math.random() * 900;
   const yCoord = mCoord * ((Math.random() * 3)-1);
@@ -111,23 +109,6 @@ function create() {
   gameState.cursors = this.input.keyboard.createCursorKeys();
   //  game.world.setBounds(0, 0, 1920, 1920);
 
-   // player = game.add.sprite(game.world.centerX, game.world.centerY, 'codey');
-   // gameState.scoreText = this.add.text(850, 800, 'Score: ', { fontSize: '30px', fill: '#000000' });
-
-    // cursors = this.input.keyboard.createCursorKeys();
-  //const walls = this.physics.add.group();
-
- // function wallGen () {
-   // const xCoord = Math.random() * 1900;
-  //  walls.create(1850, 595, 'wall');
-  // };
-	
-   // const wallGenLoop = this.time.addEvent({
-    //delay: 1000000,
-    //callback: wallGen,
-    //callbackScope: this,
-    //loop: true
-  // });
     const saCoord = Math.random() * 200;
     //this.camera.follow(player);
     // gameState.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
@@ -189,11 +170,7 @@ function create() {
    // gameState.score += 0;
     //gameState.scoreText.setText(`Score: ${gameState.score}`);
   });
-  //this.physics.add.collider(invis, walles, function (inv) {
-   //inv.destroy();
-   // gameState.score -= 10;
-  //  gameState.scoreText.setText(`Score: ${gameState.score}`);
-  //});
+
 this.physics.add.collider(gameState.player, walls, () => {
    //snow.destroy();
     gameState.score += 1;
@@ -225,7 +202,7 @@ this.physics.add.collider(gameState.player, walles, () => {
     gameState.scoreText = this.add.text(800, 560, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
     
-		// Add your code below:
+
      this.input.on('pointerup', () =>{
      gameState.score = 0;
      gameState.scoreText.setText(`Score: ${gameState.score}`);
@@ -243,26 +220,14 @@ this.physics.add.collider(gameState.player, bugs, () => {
     this.add.text(680, 450, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText = this.add.text(800, 560, 'Score: ', { fontSize: '50px', fill: '#ffffff' });
     gameState.scoreText.setText(`Score: ${gameState.score}`);
-		// Add your code below:
+
      this.input.on('pointerup', () =>{
     gameState.score = 0;
     gameState.scoreText.setText(`Score: ${gameState.score}`);
      this.scene.restart();
    });
   });
-//this.physics.add.collider(gameState.player, walls, () => {
-  // bugGenLoop.destroy();
-   // this.physics.pause();
-   // this.add.text(700, 220, 'Game Won', { fontSize: '80px', fill: '#ffffff' });
-   // this.add.text(680, 350, 'Click to Restart', { fontSize: '50px', fill: '#ffffff' });
-    
-		// Add your code below:
-     //this.input.on('pointerup', () =>{
-    //gameState.score += 1;
-    //gameState.scoreText.setText(`Score: ${gameState.score}`);
-   //  this.scene.restart();
-  // });
- // });
+
 }
 function update() {
    //player.body.setZeroVelocity();
