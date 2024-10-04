@@ -1,25 +1,223 @@
 <!DOCTYPE html>
-<html>
- <style>
-   h1{
-      text-align: center;
-      color: white;
-   }
-   body {
-        background-color: black;
-        font-family: 'Raleway', sans-serif;
-   }
-       
-       
-       
- </style>
-      <link rel="stylesheet" type="text/css" href="landing.css">
-      <title>Pavan Kovvuru</title>
-   <body>
-     <div class="content">
-       <h1><strong>Pavan Kovvuru<strong></h1>
-         <br />
-         <a href="home.html">ENTER</a>
-       <div>
-   </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pavan Kovvuru | Full Stack Developer</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+        
+        /* Sticky Header */
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        header h2 {
+            font-weight: normal;
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: #ffdc00;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        h2 {
+            color: #343a40;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ffdc00;
+            padding-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info a {
+            color: #0073b1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-info a:hover {
+            color: #005582;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Button Style */
+        .btn {
+            background-color: #0073b1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #005582;
+        }
+        
+        /* Add transitions */
+        .container,
+        header {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header with Navigation -->
+    <header>
+        <h1>PAVAN KOVVURU</h1>
+        <h2>Full Stack Developer</h2>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Contact Info Section -->
+        <div class="contact-info section">
+            <p><strong>Phone:</strong> (587) 598-7476</p>
+            <p><strong>Email:</strong> <a href="mailto:pavanvarma0369@gmail.com">pavanvarma0369@gmail.com</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/PavanKovvuru">https://github.com/PavanKovvuru</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavan-kovvuru-ba5788179/">www.linkedin.com/in/pavan-kovvuru</a></p>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2>Summary</h2>
+            <p>
+                Full Stack Developer with 1+ years of web development experience leading and contributing to various web and mobile applications. Proficient in modern technologies such as React, React Native, Node.js, Firebase, and MongoDB, with a strong focus on user experience, security, and scalable architecture. Adept at full development lifecycles, from design and implementation to post-development enhancements. Eager to contribute to dynamic teams that value creativity and impact in developing transformative technologies.
+            </p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>PanicDevs.com | Co-Founder/Full Stack Developer</strong> <br>
+                    Edmonton, Alberta | 06/2024 - Present
+                    <ul>
+                        <li>Oversaw the creation and deployment of multiple enterprise-level applications.</li>
+                        <li>Spearheaded the P2P Loan Web System development, implementing front-end with React and Ant Design, managing real-time Firebase operations, and developing server-side functionalities with Node.js.</li>
+                        <li>Developed an AI Financial Advisor mobile app using React Native, Node.js, and MongoDB, integrating AI algorithms for advisory functionalities.</li>
+                        <li>Led development of a Virtualized Medical System, enhancing user security and authentication in a React-based web application.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Concordia University of Edmonton | Research Student</strong> <br>
+                    Edmonton, Alberta | 03/2024 - 08/2024
+                    <ul>
+                        <li>Contributed to the research of A Novel Malicious URL Detection Framework.</li>
+                        <li>Engineered code for automating preprocessing of raw data for AI model training.</li>
+                        <li>Analyzed data and applied machine learning techniques to improve detection accuracy.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>TensorHub Solutions Inc. & Concordia University | Mobile App Developer Intern</strong> <br>
+                    Edmonton, Alberta | 02/2024 - 06/2024
+                    <ul>
+                        <li>Contributed to the development of an AI chatbot application for assisting disabled students.</li>
+                        <li>Built the mobile app interface with React Native and Tailwind CSS for responsive design.</li>
+                        <li>Developed and maintained backend services with Django, using TypeScript and Redux for state management.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Technical Skills:</strong> React, JavaScript, TypeScript, Java, HTML, CSS, MongoDB, Express.js, NodeJS, Angular, Redux, React Native, AWS, TailwindCSS, Bootstrap, Jest, SQL, NoSQL, Git, GitHub, Docker, Jira, AI Integration.</li>
+                <li><strong>Additional Skills:</strong> Web Security, Version control, Testing and debugging, Code Refactoring, Agile Methodologies, Team Collaboration.</li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Concordia University of Edmonton</strong> <br>
+                Bachelor of Science: Information Technology <br>
+                Edmonton, Alberta | 09/2020 - 09/2024
+            </p>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="btn" id="back-to-top">Back to Top</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pavan Kovvuru. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll to Top
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
 </html>
